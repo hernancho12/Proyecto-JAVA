@@ -1,28 +1,29 @@
 package Controlador;
-import java.math.BigDecimal;
 
-public class Producto implements Persona {
-	private String Id;
+import java.sql.Date;
+
+public class Producto  {
+	private Integer Id;
 	private String Nombre;
 	private String Descripcion;
-	private String Cantidad;
-	private BigDecimal Preciounitario;
-	private BigDecimal Impuesto;
+	private Integer Cantidad;
+	private Integer Preciounitario;
+	private Integer Impuesto;
 	
-	public Producto (String Id, String Nombre, String Descripcion,String Cantidad, BigDecimal Preciounitario, BigDecimal Impuesto) {
+	public Producto (Integer Id, String Nombre,String Descripcion, Integer Cantidad, Integer Preciounitario, Integer Impuesto) {
 		this.Id = Id;
 		this.Nombre = Nombre;
 		this.Descripcion = Descripcion;
 		this.Cantidad = Cantidad;
 		this.Preciounitario = Preciounitario;
-		this.Impuesto = Impuesto;
+		this.Impuesto = Impuesto ;
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return Id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		Id = id;
 	}
 
@@ -42,100 +43,45 @@ public class Producto implements Persona {
 		Descripcion = descripcion;
 	}
 
-	public String getCantidad() {
+	public Integer getCantidad() {
 		return Cantidad;
 	}
 
-	public void setCantidad(String cantidad) {
+	public void setCantidad(Integer cantidad) {
 		Cantidad = cantidad;
 	}
 
-	public BigDecimal getPreciounitario() {
+	public Integer getPreciounitario() {
 		return Preciounitario;
 	}
 
-	public void setPreciounitario(BigDecimal preciounitario) {
+	public void setPreciounitario(Integer preciounitario) {
 		Preciounitario = preciounitario;
 	}
 
-	public BigDecimal getImpuesto() {
-		return Impuesto;
+	public Integer getImpuesto() {
+		return (this.Preciounitario * this.Impuesto/100)+ this.Preciounitario;
 	}
 
-	public void setImpuesto(BigDecimal impuesto) {
+	public void setImpuesto(Integer impuesto) {
 		Impuesto = impuesto;
 	}
 
-	@Override
-	public String getCedula() {
+	public int getTotal() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
-	@Override
-	public void setCedula(String cedula) {
-		// TODO Auto-generated method stub
+	
 		
-	}
+	
 
-	@Override
-	public String getCorreoElectronico() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public void setCorreoElectronico(String correoElectronico) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
-	@Override
-	public String getTelefono() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public void setTelefono(String telefono) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setUsername(String username) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getPassword() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setPassword(String password) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String getDireccion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setDireccion(String direccion) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
+	
 
 }

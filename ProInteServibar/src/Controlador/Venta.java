@@ -1,26 +1,24 @@
 package Controlador;
-import java.math.BigDecimal;
+
 import java.sql.Date;
 
 
 public class Venta {
-	private String IdVenta;
+	private Integer IdVenta;
 	private Date Fecha;
 	private Integer Cantidad;
-	private BigDecimal Subtotal;
-	private BigDecimal Iva;
-	private BigDecimal Total;
+	private Integer Iva;
+	private Integer Total;
 	private Integer Id_vendedor;
 	private Integer Id_cliente;
 	private Integer Id_producto;
 	
-	public Venta(String IdVenta, Date Fecha, Integer Cantidad, BigDecimal Subtotal, BigDecimal Iva, BigDecimal Total, Integer Id_vendedor,
+	public Venta(Integer IdVenta, Date Fecha, Integer Cantidad, Integer Subtotal, Integer Iva, Integer Total, Integer Id_vendedor,
 			Integer Id_cliente, Integer Id_producto) {
 	
 		this.IdVenta = IdVenta;
 		this.Fecha = Fecha;
 		this.Cantidad = Cantidad;
-		this.Subtotal = Subtotal;
 		this.Iva = Iva;
 		this.Total = Total;
 		this.Id_vendedor = Id_vendedor;
@@ -28,11 +26,11 @@ public class Venta {
 		this.Id_producto = Id_producto;
 	}
 
-	public String getIdVenta() {
+	public Integer getIdVenta() {
 		return IdVenta;
 	}
 
-	public void setIdVenta(String idVenta) {
+	public void setIdVenta(Integer idVenta) {
 		IdVenta = idVenta;
 	}
 
@@ -52,27 +50,19 @@ public class Venta {
 		Cantidad = cantidad;
 	}
 
-	public BigDecimal getSubtotal() {
-		return Subtotal;
-	}
-
-	public void setSubtotal(BigDecimal subtotal) {
-		Subtotal = subtotal;
-	}
-
-	public BigDecimal getIva() {
+	public Integer getIva() {
 		return Iva;
 	}
 
-	public void setIva(BigDecimal iva) {
+	public void setIva(Integer iva) {
 		Iva = iva;
 	}
 
-	public BigDecimal getTotal() {
+	public Integer getTotal() {
 		return Total;
 	}
 
-	public void setTotal(BigDecimal total) {
+	public void setTotal(Integer total) {
 		Total = total;
 	}
 

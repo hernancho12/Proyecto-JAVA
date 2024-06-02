@@ -1,71 +1,101 @@
 package Controlador;
 
-
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Date;
 
-public class Cliente implements Persona {
-	private Integer Id;
-	private String Cedula;
-	private String Nombre;
-	private String correoElectronico;
-	private String Telefono;
-	private String Direccion;
-	
-	public Cliente (Integer Id, String Cedula, String Nombre, String correoElectronico, String Telefono, String Direccion) {
-		this.Id = Id;
-		this.Cedula = Cedula;
-		this.Nombre = Nombre;
-		this.correoElectronico = correoElectronico;
-		this.Telefono = Telefono;
-		this.Direccion = Direccion;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+public class DatosJson implements Persona {
+
+	@Override
+	public Producto getProductInfo(String id) {
+		// TODO Auto-generated method stub
+		Producto pro = null;
+		JSONParser parser = new JSONParser();
+		try {
+			JSONArray o = (JSONArray) parser.parse(new FileReader("./Productos.json"));
+			for(Object o1 : o) {
+				JSONObject temp = (JSONObject) o1;
+				if(temp.get("id").toString().equals(id)) {
+					pro = new Producto(Integer.parseInt(temp.get("id").toString()), temp.get("Name").toString(), id, Integer.parseInt(temp.get("Price").toString()), null, null);
+				}
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return pro;
 	}
 
+	@Override
 	public Integer getId() {
-		return Id;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	public void setId(Integer id) {
-		Id = id;
+	@Override
+	public void setId(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public String getCedula() {
-		return Cedula;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	@Override
 	public void setCedula(String cedula) {
-		Cedula = cedula;
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public String getNombre() {
-		return Nombre;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	@Override
 	public void setNombre(String nombre) {
-		Nombre = nombre;
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public String getCorreoElectronico() {
-		return correoElectronico;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	@Override
 	public void setCorreoElectronico(String correoElectronico) {
-		this.correoElectronico = correoElectronico;
+		// TODO Auto-generated method stub
+		
 	}
 
+	@Override
 	public String getTelefono() {
-		return Telefono;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	@Override
 	public void setTelefono(String telefono) {
-		Telefono = telefono;
-	}
-
-	public String getDireccion() {
-		return Direccion;
-	}
-
-	public void setDireccion(String direccion) {
-		Direccion = direccion;
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -92,26 +122,17 @@ public class Cliente implements Persona {
 		
 	}
 
-	
-
 	@Override
-	public String getDescripcion() {
+	public String getDireccion() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setDescripcion(String descripcion) {
+	public void setDireccion(String direccion) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	
-	public Integer getCantidad() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 
 	@Override
 	public Cliente getCliente() {
@@ -174,48 +195,9 @@ public class Cliente implements Persona {
 	}
 
 	@Override
-	public Producto getProdu() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setProdu(Producto produ) {
+	public void setId(Integer newValue) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	
-	
-	
-
-	@Override
-	public void setId(int id) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-
-	@Override
-	public void setCantidad(Integer cantidad) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	
-
-	@Override
-	public Integer getPreciounitario() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Integer getImpuesto() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
@@ -226,12 +208,6 @@ public class Cliente implements Persona {
 
 	@Override
 	public Factura getFacturaInfo(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Producto getProductInfo(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -248,13 +224,51 @@ public class Cliente implements Persona {
 		return null;
 	}
 
-	
-	
+	@Override
+	public Producto getProdu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-	
+	@Override
+	public void setProdu(Producto produ) {
+		// TODO Auto-generated method stub
+		
+	}
 
-	
+	@Override
+	public Integer getCantidad() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-	
+	@Override
+	public void setCantidad(Integer cantidad) {
+		// TODO Auto-generated method stub
+		
+	}
 
+	@Override
+	public void setDescripcion(String setDescripcion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Integer getPreciounitario() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getImpuesto() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getDescripcion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

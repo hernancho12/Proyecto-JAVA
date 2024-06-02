@@ -17,6 +17,7 @@ public class VentanaPrincipal extends Application {
 			Parent root = FXMLLoader.load(getClass().getResource("/Vista/VentanaPrincipal.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle(" SISTEMA SERVIBAR ;)");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

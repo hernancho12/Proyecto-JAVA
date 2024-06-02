@@ -10,267 +10,309 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.VentanaPrincipalController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+
    <children>
-      <TabPane fx:id="panelAdmin" cacheShape="false" layoutX="-2.0" prefHeight="400.0" prefWidth="800.0" rotateGraphic="true" style="-fx-background-color: #6576f8;" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="panelAdmin" cacheShape="false" layoutX="-2.0" prefHeight="474.0" prefWidth="800.0" rotateGraphic="true" style="-fx-background-color: #6576f8;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Vendedor">
+          <Tab text="VENDEDOR">
             <content>
               <AnchorPane prefHeight="371.0" prefWidth="720.0" style="-fx-background-color: #ffffff;">
                      <children>
-                        <AnchorPane layoutX="4.0" layoutY="2.0" prefHeight="366.0" prefWidth="174.0" style="-fx-background-color: #f47575;">
+                        <AnchorPane layoutX="4.0" layoutY="2.0" prefHeight="432.0" prefWidth="181.0" style="-fx-background-color: #ffafaf;">
                            <children>
-                              <Label alignment="CENTER" layoutX="-2.0" layoutY="14.0" prefHeight="17.0" prefWidth="178.0" text="Nuevo Vendedor">
+                              <Label alignment="CENTER" layoutX="-2.0" layoutY="14.0" prefHeight="17.0" prefWidth="178.0" text="VENDEDOR">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="43.0" layoutY="54.0" text="Id">
+                              <Label layoutX="43.0" layoutY="54.0" text="ID">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="Cedula" layoutX="25.0" layoutY="92.0" prefHeight="17.0" prefWidth="39.0" text="Cedula">
+                              <Label fx:id="Cedula" layoutX="17.0" layoutY="92.0" prefHeight="17.0" prefWidth="47.0" text="CEDULA">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="63.0" layoutY="116.0" text="Nombre">
+                              <Label layoutX="63.0" layoutY="116.0" text="NOMBRE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="34.0" layoutY="175.0" text="Correo Electronico">
+                              <Label layoutX="23.0" layoutY="175.0" text="CORREO ELECTRONICO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="19.0" layoutY="252.0" text="Telefono">
+                              <Label layoutX="13.0" layoutY="252.0" text="TELEFONO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="IdNuevoVendeor" layoutX="82.0" layoutY="50.0" prefHeight="25.0" prefWidth="85.0" />
-                              <TextField fx:id="NombreNuevoVendedor" layoutX="9.0" layoutY="141.0" prefHeight="25.0" prefWidth="160.0" />
-                              <TextField fx:id="CorreoNuevoVendedor" layoutX="9.0" layoutY="208.0" prefHeight="25.0" prefWidth="160.0" />
-                              <TextField fx:id="TelefonoNuevoVendedor" layoutX="82.0" layoutY="248.0" prefHeight="25.0" prefWidth="85.0" />
-                              <Button fx:id="BuscarVendedorbtn" layoutX="23.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#OnBuscarVendedorbtn" text="Buscar" />
-                              <Button fx:id="RegistrarVendedorBtn" layoutX="95.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#OnRegistrarVendedorBtn" text="Registrar" />
-                              <Button fx:id="modificarVendedorbtn" layoutX="19.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#OnmodificarVendedorbtn" text="Modificar" />
-                              <Button fx:id="EliminarVendedorbtn" layoutX="95.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#OnEliminarVendedorbtn" text="Eliminar" />
-                              <TextField fx:id="CedulaNuevoVendeor" layoutX="82.0" layoutY="88.0" prefHeight="25.0" prefWidth="85.0" />
+                              <TextField fx:id="IdNuevoVendeor" alignment="CENTER" layoutX="82.0" layoutY="50.0" prefHeight="25.0" prefWidth="85.0" promptText="##" />
+                              <TextField fx:id="NombreNuevoVendedor" alignment="CENTER" layoutX="9.0" layoutY="141.0" prefHeight="25.0" prefWidth="160.0" promptText="example example" />
+                              <TextField fx:id="CorreoNuevoVendedor" layoutX="9.0" layoutY="208.0" prefHeight="25.0" prefWidth="160.0" promptText="example@example.com" />
+                              <TextField fx:id="TelefonoNuevoVendedor" alignment="CENTER" layoutX="82.0" layoutY="248.0" prefHeight="25.0" prefWidth="85.0" promptText="0000000000" />
+                              <Button fx:id="BuscarVendedorbtn" layoutX="43.0" layoutY="286.0" mnemonicParsing="false" onMouseClicked="#OnBuscarVendedorbtn" prefHeight="25.0" prefWidth="78.0" text="BUSCAR" />
+                              <Button fx:id="RegistrarVendedorBtn" layoutX="44.0" layoutY="322.0" mnemonicParsing="false" onMouseClicked="#OnRegistrarVendedorBtn" prefHeight="25.0" prefWidth="76.0" text="REGISTRAR" />
+                              <Button fx:id="modificarVendedorbtn" layoutX="43.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#OnmodificarVendedorbtn" text="MODIFICAR" />
+                              <Button fx:id="EliminarVendedorbtn" layoutX="45.0" layoutY="393.0" mnemonicParsing="false" onMouseClicked="#OnEliminarVendedorbtn" prefHeight="25.0" prefWidth="74.0" text="ELIMINAR" />
+                              <TextField fx:id="CedulaNuevoVendeor" layoutX="82.0" layoutY="88.0" prefHeight="25.0" prefWidth="85.0" promptText="0000000000" />
                            </children>
                         </AnchorPane>
-                        <TableView fx:id="tableVendedor" editable="true" layoutX="183.0" layoutY="2.0" onMouseClicked="#selectTablaVen" prefHeight="367.0" prefWidth="613.0">
+                        <TableView fx:id="tableVendedor" editable="true" layoutX="183.0" layoutY="2.0" onMouseClicked="#selectTablaVen" prefHeight="430.0" prefWidth="613.0">
                           <columns>
-                            <TableColumn fx:id="IdNueVenTable" onEditCommit="#OnIdNueVenTable" prefWidth="43.0" text="Id" />
-                              <TableColumn fx:id="CedulaNueVenTable" minWidth="0.0" onEditCommit="#OnCedulaNueVenTable" prefWidth="88.0" text="Cedula" />
-                            <TableColumn fx:id="NombreNueVenTable" onEditCommit="#OnNombreNueVenTable" prefWidth="126.0" text="Nombre" />
-                              <TableColumn fx:id="CorreoNueVenTable" onEditCommit="#OnCorreoNueVenTable" prefWidth="192.0" text="Correo Electronico" />
-                              <TableColumn fx:id="TelefonoNueVenTable" onEditCommit="#OnTelefonoNueVenTable" prefWidth="163.0" text="Telefono" />
+                            <TableColumn fx:id="IdNueVenTable" onEditCommit="#OnIdNueVenTable" prefWidth="43.0" text="ID" />
+                              <TableColumn fx:id="CedulaNueVenTable" minWidth="0.0" onEditCommit="#OnCedulaNueVenTable" prefWidth="88.0" text="CEDULA" />
+                            <TableColumn fx:id="NombreNueVenTable" onEditCommit="#OnNombreNueVenTable" prefWidth="126.0" text="NOMBRE" />
+                              <TableColumn fx:id="CorreoNueVenTable" onEditCommit="#OnCorreoNueVenTable" prefWidth="192.0" text="CORREO ELECTRONICO" />
+                              <TableColumn fx:id="TelefonoNueVenTable" onEditCommit="#OnTelefonoNueVenTable" prefWidth="163.0" text="TELEFONO" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
             </content>
           </Tab>
-          <Tab text="Cliente">
+          <Tab text="CLIENTE">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
                      <children>
-                        <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="367.0" prefWidth="178.0" style="-fx-background-color: #f47575;">
+                        <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="444.0" prefWidth="182.0" style="-fx-background-color: #ffafaf;">
                            <children>
-                              <Label alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="17.0" prefWidth="178.0" text="Nuevo Cliente">
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="17.0" prefWidth="178.0" text="CLIENTE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="31.0" layoutY="45.0" text="Id">
+                              <Label layoutX="31.0" layoutY="45.0" text="ID">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" layoutY="99.0" prefHeight="17.0" prefWidth="177.0" text="Nombre">
+                              <Label alignment="CENTER" layoutY="99.0" prefHeight="17.0" prefWidth="177.0" text="NOMBRE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" layoutY="147.0" prefHeight="17.0" prefWidth="182.0" text="Correo Electronico">
+                              <Label alignment="CENTER" layoutY="147.0" prefHeight="17.0" prefWidth="182.0" text="CORREO ELECTRONICO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" layoutX="5.0" layoutY="211.0" prefHeight="17.0" prefWidth="63.0" text="Telefono">
+                              <Label alignment="CENTER" layoutX="5.0" layoutY="211.0" prefHeight="17.0" prefWidth="63.0" text="TELEFONO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="IdNueClienteTxt" layoutX="80.0" layoutY="41.0" prefHeight="25.0" prefWidth="85.0" />
-                              <TextField fx:id="NombreNueClienteTxt" layoutX="12.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" />
-                              <TextField fx:id="CorreoNueClienteTxt" layoutX="11.0" layoutY="171.0" prefHeight="25.0" prefWidth="160.0" />
-                              <TextField fx:id="TelefonoNueClienteTxt" layoutX="77.0" layoutY="207.0" prefHeight="25.0" prefWidth="94.0" />
-                              <Button fx:id="modificarClientebtn" layoutX="27.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#OnModificarClientebtn" text="Modificar" />
-                              <Button fx:id="eliminarClientebtn" layoutX="100.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#OnEliminarClientebtn" text="Eliminar" />
-                              <Button fx:id="buscarClientebtn" layoutX="36.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#OnBuscarClientebtn" text="Buscar" />
-                              <TextField fx:id="DireccionNueClienteTxt" layoutX="12.0" layoutY="262.0" prefHeight="25.0" prefWidth="160.0" />
-                              <Label layoutX="61.0" layoutY="238.0" text="Direccion">
+                              <TextField fx:id="IdNueClienteTxt" alignment="CENTER" layoutX="80.0" layoutY="41.0" prefHeight="25.0" prefWidth="85.0" promptText="##" />
+                              <TextField fx:id="NombreNueClienteTxt" alignment="CENTER" layoutX="12.0" layoutY="122.0" prefHeight="25.0" prefWidth="160.0" promptText="example example" />
+                              <TextField fx:id="CorreoNueClienteTxt" alignment="CENTER" layoutX="11.0" layoutY="171.0" prefHeight="25.0" prefWidth="160.0" promptText="example@example.com" />
+                              <TextField fx:id="TelefonoNueClienteTxt" alignment="CENTER" layoutX="77.0" layoutY="207.0" prefHeight="25.0" prefWidth="94.0" promptText="0000000000" />
+                              <Button fx:id="modificarClientebtn" layoutX="53.0" layoutY="365.0" mnemonicParsing="false" onMouseClicked="#OnModificarClientebtn" text="MODIFICAR" />
+                              <Button fx:id="eliminarClientebtn" layoutX="54.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#OnEliminarClientebtn" prefHeight="25.0" prefWidth="76.0" text="ELIMINAR" />
+                              <Button fx:id="buscarClientebtn" layoutX="54.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#OnBuscarClientebtn" prefHeight="25.0" prefWidth="78.0" text="BUSCAR" />
+                              <TextField fx:id="DireccionNueClienteTxt" alignment="CENTER" layoutX="12.0" layoutY="262.0" prefHeight="25.0" prefWidth="160.0" promptText="carrera example # 00-00" />
+                              <Label layoutX="61.0" layoutY="238.0" text="DIRECCION ">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="CedulaNueClienteTxt" layoutX="82.0" layoutY="72.0" prefHeight="25.0" prefWidth="85.0" />
-                              <Label layoutX="23.0" layoutY="76.0" text="Cedula">
+                              <TextField fx:id="CedulaNueClienteTxt" alignment="CENTER" layoutX="82.0" layoutY="72.0" prefHeight="25.0" prefWidth="85.0" promptText="0000000000" />
+                              <Label layoutX="23.0" layoutY="76.0" text="CEDULA">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Button fx:id="registrarClientebtn" layoutX="107.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#OnRegistrarClientebtn" text="Registrar" />
+                              <Button fx:id="registrarClientebtn" layoutX="52.0" layoutY="331.0" mnemonicParsing="false" onMouseClicked="#OnRegistrarClientebtn" prefHeight="25.0" prefWidth="81.0" text="REGISTRAR" />
                            </children>
                         </AnchorPane>
-                        <TableView fx:id="tableCliente" editable="true" layoutX="188.0" layoutY="2.0" onMouseClicked="#selectTablaClien" prefHeight="367.0" prefWidth="609.0">
+                        <TableView fx:id="tableCliente" editable="true" layoutX="188.0" layoutY="2.0" onMouseClicked="#selectTablaClien" prefHeight="441.0" prefWidth="609.0">
                            <columns>
-                              <TableColumn fx:id="IdNueClienteTable" onEditCommit="#OnIdNueClienteTable" prefWidth="33.0" text="Id" />
-                              <TableColumn fx:id="CedulaNueClienteTable" onEditCommit="#OnCedulaNueClienteTable" prefWidth="85.0" text="Cedula" />
-                              <TableColumn fx:id="NombreNueClienteTable" onEditCommit="#OnNombreNueClienteTable" prefWidth="116.0" text="Nombre" />
-                              <TableColumn fx:id="CorreoNueClienteTable" onEditCommit="#OnCorreoNueClienteTable" prefWidth="173.0" text="Correo Electronico" />
-                              <TableColumn fx:id="TelefonoNueClienteTable" onEditCommit="#OnTelefonoNueClienteTable" prefWidth="102.0" text="Telefono" />
-                              <TableColumn fx:id="DireccionNueClienteTable" onEditCommit="#OnDireccionNueClienteTable" prefWidth="99.0" text="Direccion" />
+                              <TableColumn fx:id="IdNueClienteTable" onEditCommit="#OnIdNueClienteTable" prefWidth="33.0" text="ID" />
+                              <TableColumn fx:id="CedulaNueClienteTable" onEditCommit="#OnCedulaNueClienteTable" prefWidth="85.0" text="CEDULA" />
+                              <TableColumn fx:id="NombreNueClienteTable" onEditCommit="#OnNombreNueClienteTable" prefWidth="116.0" text="NOMBRE" />
+                              <TableColumn fx:id="CorreoNueClienteTable" onEditCommit="#OnCorreoNueClienteTable" prefWidth="173.0" text="CORREO ELECTRONICO" />
+                              <TableColumn fx:id="TelefonoNueClienteTable" onEditCommit="#OnTelefonoNueClienteTable" prefWidth="102.0" text="TELEFONO" />
+                              <TableColumn fx:id="DireccionNueClienteTable" onEditCommit="#OnDireccionNueClienteTable" prefWidth="99.0" text="DIRECCION" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
             </content>
           </Tab>
-            <Tab text="Producto">
+            <Tab text="PRODUCTO">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="791.0" style="-fx-background-color: #ffffff;">
                      <children>
-                        <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="366.0" prefWidth="178.0" style="-fx-background-color: #f47575;">
+                        <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="442.0" prefWidth="182.0" style="-fx-background-color: #ffafaf;">
                            <children>
-                              <Label alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="17.0" prefWidth="178.0" text="Nuevo Producto">
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="17.0" prefWidth="178.0" text="PRODUCTO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="14.0" layoutY="45.0" text="Id">
+                              <Label layoutX="14.0" layoutY="45.0" text="ID">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" layoutY="74.0" prefHeight="17.0" prefWidth="177.0" text="Nombre">
+                              <Label alignment="CENTER" layoutY="74.0" prefHeight="17.0" prefWidth="177.0" text="NOMBRE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" layoutX="65.0" layoutY="45.0" prefHeight="17.0" prefWidth="58.0" text="Cantidad">
+                              <Label alignment="CENTER" layoutX="58.0" layoutY="45.0" prefHeight="17.0" prefWidth="65.0" text="CANTIDAD">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label alignment="CENTER" layoutY="175.0" prefHeight="17.0" prefWidth="182.0" text="Precio Unitario">
+                              <Label alignment="CENTER" layoutY="175.0" prefHeight="17.0" prefWidth="182.0" text="PRECIO UNITARIO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="IdProductoTxt" layoutX="28.0" layoutY="41.0" prefHeight="25.0" prefWidth="27.0" />
-                              <TextField fx:id="NombreProductoTxt" layoutX="12.0" layoutY="91.0" prefHeight="25.0" prefWidth="160.0" />
-                              <TextField fx:id="CantidadProductoTxt" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="55.0" />
-                              <TextField fx:id="PreciounitarioProductoTxt" layoutX="15.0" layoutY="200.0" prefHeight="25.0" prefWidth="160.0" />
-                              <Button fx:id="BuscarProductoBtn" layoutX="28.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#OnBuscarProductoBtn" text="Buscar" />
-                              <Button fx:id="RegistrarProductoBtn" layoutX="100.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#OnRegistrarProductoBtn" text="Registrar" />
-                              <Button fx:id="ModificarProductoBtn" layoutX="20.0" layoutY="289.0" mnemonicParsing="false" onMouseClicked="#OnModificarProductoBtn" text="Modificar" />
-                              <Button fx:id="EliminarProductoBtn" layoutX="100.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#OnEliminarProductoBtn" text="Eliminar" />
-                              <TextField fx:id="DescripcionProductoTxt" layoutX="18.0" layoutY="150.0" />
-                              <Label layoutX="54.0" layoutY="124.0" text="Descripcion">
+                              <TextField fx:id="IdProductoTxt" alignment="CENTER" layoutX="28.0" layoutY="41.0" prefHeight="25.0" prefWidth="27.0" promptText="#" />
+                              <TextField fx:id="NombreProductoTxt" alignment="CENTER" layoutX="12.0" layoutY="91.0" prefHeight="25.0" prefWidth="160.0" promptText="example" />
+                              <TextField fx:id="CantidadProductoTxt" alignment="CENTER" layoutX="123.0" layoutY="41.0" prefHeight="25.0" prefWidth="55.0" promptText="####" />
+                              <TextField fx:id="PreciounitarioProductoTxt" alignment="CENTER" layoutX="15.0" layoutY="200.0" prefHeight="25.0" prefWidth="160.0" promptText="000000000" />
+                              <Button fx:id="BuscarProductoBtn" layoutX="53.0" layoutY="292.0" mnemonicParsing="false" onMouseClicked="#OnBuscarProductoBtn" prefHeight="25.0" prefWidth="79.0" text="BUSCAR" />
+                              <Button fx:id="RegistrarProductoBtn" layoutX="55.0" layoutY="327.0" mnemonicParsing="false" onMouseClicked="#OnRegistrarProductoBtn" prefHeight="25.0" prefWidth="77.0" text="REGISTRAR" />
+                              <Button fx:id="ModificarProductoBtn" layoutX="53.0" layoutY="362.0" mnemonicParsing="false" onMouseClicked="#OnModificarProductoBtn" text="MODIFICAR" />
+                              <Button fx:id="EliminarProductoBtn" layoutX="55.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#OnEliminarProductoBtn" prefHeight="25.0" prefWidth="75.0" text="ELIMINAR" />
+                              <TextField fx:id="DescripcionProductoTxt" alignment="CENTER" layoutX="18.0" layoutY="150.0" promptText="example example" />
+                              <Label layoutX="54.0" layoutY="124.0" text="DESCRIPCION">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="31.0" layoutY="246.0" text="Impuesto">
+                              <Label layoutX="31.0" layoutY="246.0" text="IMPUESTO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField fx:id="ImpuestoProductoTxt" layoutX="98.0" layoutY="242.0" prefHeight="25.0" prefWidth="69.0" />
+                              <TextField fx:id="ImpuestoProductoTxt" alignment="CENTER" layoutX="98.0" layoutY="242.0" prefHeight="25.0" prefWidth="69.0" promptText="0000" />
                            </children>
                         </AnchorPane>
-                        <TableView fx:id="tableProducto" editable="true" layoutX="189.0" layoutY="2.0" onMouseClicked="#selectTablaProducto" prefHeight="367.0" prefWidth="609.0">
+                        <TableView fx:id="tableProducto" editable="true" layoutX="189.0" layoutY="2.0" onMouseClicked="#selectTablaProducto" prefHeight="441.0" prefWidth="609.0">
                            <columns>
-                              <TableColumn fx:id="IdProductoTable" onEditCommit="#OnIdProductoTable" prefWidth="27.0" text="Id" />
-                              <TableColumn fx:id="NombreProductoTable" onEditCommit="#OnNombreProductoTable" prefWidth="136.0" text="Nombre" />
-                              <TableColumn fx:id="DescripcionProductoTable" onEditCommit="#OnDescripcionProductoTable" prefWidth="235.0" text="Descripcion" />
-                              <TableColumn fx:id="CantidadProductoTable" onEditCommit="#OnCantidadProductoTable" prefWidth="58.0" text="Cantidad" />
-                              <TableColumn fx:id="PreciounitarioProductoTable" onEditCommit="#OnPreciounitarioProductoTable" prefWidth="93.0" text="Precio Unitario" />
-                              <TableColumn fx:id="ImpuestoProductoTable" onEditCommit="#OnImpuestoProductoTable" prefWidth="59.0" text="Impuesto" />
+                              <TableColumn fx:id="IdProductoTable" onEditCommit="#OnIdProductoTable" prefWidth="27.0" text="ID" />
+                              <TableColumn fx:id="NombreProductoTable" onEditCommit="#OnNombreProductoTable" prefWidth="136.0" text="NOMBRE" />
+                              <TableColumn fx:id="DescripcionProductoTable" onEditCommit="#OnDescripcionProductoTable" prefWidth="215.0" text="DESCRIPCION" />
+                              <TableColumn fx:id="CantidadProductoTable" onEditCommit="#OnCantidadProductoTable" prefWidth="71.0" text="CANTIDAD" />
+                              <TableColumn fx:id="PreciounitarioProductoTable" onEditCommit="#OnPreciounitarioProductoTable" prefWidth="84.0" text="PRECIO" />
+                              <TableColumn fx:id="ImpuestoProductoTable" onEditCommit="#OnImpuestoProductoTable" prefWidth="75.0" text="TOTAL" />
                            </columns>
                         </TableView>
                      </children></AnchorPane>
                </content>
             </Tab>
-            <Tab text="Realizar Venta">
+            <Tab text="REALIZAR VENTA">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="385.0" prefWidth="800.0" style="-fx-background-color: #ffffff;">
                      <children>
-                        <AnchorPane layoutX="3.0" layoutY="1.0" prefHeight="366.0" prefWidth="794.0" style="-fx-background-color: #f47575;">
+                        <AnchorPane layoutX="3.0" layoutY="1.0" prefHeight="444.0" prefWidth="794.0" style="-fx-background-color: #fcfefb;">
                            <children>
-                              <Label layoutX="30.0" layoutY="25.0" text="Id">
+                              <Label layoutX="14.0" layoutY="14.0" text="ID PRODUCTO ">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font></Label>
-                              <Label layoutX="98.0" layoutY="25.0" prefHeight="17.0" prefWidth="55.0" text="Producto">
+                              <Label layoutX="160.0" layoutY="14.0" prefHeight="17.0" prefWidth="70.0" text="CANTIDAD">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font></Label>
-                              <Label layoutX="228.0" layoutY="25.0" prefHeight="17.0" prefWidth="55.0" text="Cantidad">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font></Label>
-                              <Label layoutX="301.0" layoutY="25.0" prefHeight="17.0" prefWidth="55.0" text="Precio">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font></Label>
-                              <Label layoutX="392.0" layoutY="25.0" prefHeight="17.0" prefWidth="55.0" text="Total">
-                                 <font>
-                                    <Font name="System Bold" size="12.0" />
-                                 </font></Label>
-                              <Button layoutX="509.0" layoutY="35.0" mnemonicParsing="false" text="Generar" />
-                              <TextField layoutX="14.0" layoutY="46.0" prefHeight="25.0" prefWidth="70.0" />
-                              <TextField layoutX="91.0" layoutY="46.0" prefHeight="25.0" prefWidth="127.0" />
-                              <TextField layoutX="230.0" layoutY="46.0" prefHeight="25.0" prefWidth="51.0" />
-                              <TextField layoutX="302.0" layoutY="47.0" prefHeight="25.0" prefWidth="77.0" />
-                              <TextField layoutX="391.0" layoutY="47.0" prefHeight="25.0" prefWidth="56.0" />
-                              <TableView editable="true" layoutX="9.0" layoutY="83.0" prefHeight="232.0" prefWidth="776.0">
+                              <Button fx:id="consultarrealizarBtn" layoutX="705.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#OnconsultarrealizarBtn" style="-fx-background-color: #eb6767;" text="CONSULTAR" textFill="WHITE" />
+                              <TextField fx:id="idproductorealizartxt" alignment="CENTER" layoutX="104.0" layoutY="10.0" prefHeight="25.0" prefWidth="44.0" promptText="#" style="-fx-background-color: #ffafaf;" />
+                              <TextField fx:id="cantidadrealizartxt" alignment="CENTER" layoutX="230.0" layoutY="10.0" prefHeight="25.0" prefWidth="54.0" promptText="##" style="-fx-background-color: #ffafaf;" />
+                              <TableView fx:id="tableFacturaProducto" editable="true" layoutX="9.0" layoutY="46.0" onMouseClicked="#selectTablaFacturaProducto" prefHeight="306.0" prefWidth="776.0">
                                 <columns>
-                                  <TableColumn prefWidth="105.0" text="Id" />
-                                  <TableColumn prefWidth="194.0" text="Producto" />
-                                    <TableColumn prefWidth="152.0" text="Cantidad" />
-                                    <TableColumn prefWidth="158.0" text="Precio" />
-                                    <TableColumn prefWidth="165.0" text="Total" />
+                                  <TableColumn fx:id="idproductorealizarcolum" prefWidth="105.0" text="ID" />
+                                  <TableColumn fx:id="productorealizarcolum" prefWidth="224.0" text="PRODUCTO" />
+                                    <TableColumn fx:id="preciorealizarcolum" prefWidth="148.0" text="PRECIO" />
+                                    <TableColumn fx:id="cantidadrealizarcolum" prefWidth="153.0" text="CANTIDAD" />
+                                    <TableColumn fx:id="totalrealizarcolum" prefWidth="144.0" text="TOTAL" />
                                 </columns>
                               </TableView>
-                              <TextField layoutX="98.0" layoutY="327.0" prefHeight="25.0" prefWidth="127.0" />
-                              <Label layoutX="51.0" layoutY="331.0" text="Cliente">
+                              <TextField fx:id="idclienterealizartxt" alignment="CENTER" layoutX="84.0" layoutY="381.0" prefHeight="25.0" prefWidth="84.0" promptText="####" style="-fx-background-color: #ffafaf;" />
+                              <Label layoutX="11.0" layoutY="385.0" text="ID CLIENTE">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <TextField layoutX="356.0" layoutY="327.0" prefHeight="25.0" prefWidth="127.0" />
-                              <Label layoutX="265.0" layoutY="331.0" text="Total a pagar">
+                              <Label layoutX="624.0" layoutY="385.0" text="TELEFONO">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
+                              <Button fx:id="agregarrealizarBtn" layoutX="310.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#OnagregarrealizarBtn" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #eb6767;" text="AGREGAR" textFill="WHITE" />
+                              <Button fx:id="pagarrealizarBtn" layoutX="394.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#OnpagarrealizarBtn" style="-fx-background-color: #eb6767;" text="PAGAR" textFill="WHITE" />
+                              <Label layoutX="178.0" layoutY="385.0" text="NOMBRE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="379.0" layoutY="385.0" text="CORREO">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nombrerealizartxt" alignment="CENTER" layoutX="239.0" layoutY="381.0" prefHeight="25.0" prefWidth="126.0" promptText="example example" style="-fx-background-color: #ffafaf;" />
+                              <TextField fx:id="correorealizartxt" alignment="CENTER" layoutX="435.0" layoutY="381.0" prefHeight="25.0" prefWidth="178.0" promptText="example@example.com" style="-fx-background-color: #ffafaf;" />
+                              <TextField fx:id="telefonorealizartxt" alignment="CENTER" layoutX="689.0" layoutY="381.0" prefHeight="25.0" prefWidth="85.0" promptText="000000000" style="-fx-background-color: #ffafaf;" />
+                              <Label layoutX="461.0" layoutY="14.0" prefHeight="17.0" prefWidth="137.0" text="CONSULTAR FACTURA">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="662.0" layoutY="357.0" prefHeight="17.0" prefWidth="45.0" text="TOTAL" />
+                              <Label fx:id="totalLBL" layoutX="710.0" layoutY="357.0" prefHeight="17.0" prefWidth="73.0" text="0000000000" textFill="#05a1ff" />
+                              <TextField fx:id="consultarfacturarealizartxt" alignment="CENTER" layoutX="599.0" layoutY="10.0" prefHeight="25.0" prefWidth="89.0" promptText="####" style="-fx-background-color: #ffafaf;" />
+                              <Label layoutX="713.0" layoutY="411.0" prefHeight="17.0" prefWidth="37.0" text="NUM " />
+                              <Label fx:id="idFacturalabel" layoutX="750.0" layoutY="411.0" prefHeight="17.0" prefWidth="34.0" textFill="#05a1ff">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font></Label>
                            </children>
                         </AnchorPane>
                      </children></AnchorPane>
                </content>
             </Tab>
-            <Tab text="Generar Reporte">
+            <Tab text="GENERAR REPORTE ">
                <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c37777;" />
-               </content>
-            </Tab>
-            <Tab text="Cerrar Sesion">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #eb6767;" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #c37777;">
+                     <children>
+                        <TabPane prefHeight="444.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="PRODUCTOS">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane fx:id="chartGrafic" layoutX="305.0" layoutY="52.0" prefHeight="200.0" prefWidth="200.0" />
+                                          <TableView prefHeight="415.0" prefWidth="292.0">
+                                            <columns>
+                                              <TableColumn prefWidth="148.0" text="Nombre" />
+                                              <TableColumn prefWidth="131.0" text="Cantidad" />
+                                            </columns>
+                                          </TableView>
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="VENDEDOR">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView prefHeight="417.0" prefWidth="287.0">
+                                            <columns>
+                                              <TableColumn prefWidth="75.0" text="C1" />
+                                              <TableColumn prefWidth="116.0" text="C2" />
+                                            </columns>
+                                          </TableView>
+                                          <AnchorPane layoutX="300.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
                </content>
             </Tab>
         </tabs>

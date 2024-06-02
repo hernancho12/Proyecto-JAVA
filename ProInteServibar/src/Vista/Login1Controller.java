@@ -14,6 +14,7 @@ import Controlador.Vendedor;
 import Controlador.Session;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.CheckBox;
 
 public class Login1Controller {
@@ -24,7 +25,7 @@ public class Login1Controller {
     @FXML
     private TextField txtUsuario;
     @FXML
-    private TextField txtContraseña;
+    private PasswordField txtContraseña;
     @FXML
     private CheckBox checkRegistrar;
     @FXML

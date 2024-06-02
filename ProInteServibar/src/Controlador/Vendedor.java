@@ -1,9 +1,10 @@
 package Controlador;
 
-import java.math.BigDecimal;
+
+import java.sql.Date;
 
 public class Vendedor implements Persona {
-	private String Id;
+	private Integer Id;
 	private String Cedula;
 	private String Nombre;
 	private String correoElectronico;
@@ -12,7 +13,7 @@ public class Vendedor implements Persona {
 	private String password;
 	
 	
-	public Vendedor(String Id, String Cedula,  String Nombre, String correoElectronico, String Telefono, String username, String password) {
+	public Vendedor(Integer Id, String Cedula,  String Nombre, String correoElectronico, String Telefono, String username, String password) {
 		this.Id = Id;
 		this.Cedula= Cedula;
 		this.Nombre = Nombre;
@@ -23,12 +24,12 @@ public class Vendedor implements Persona {
 		
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return Id;
 	}
 
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		Id = id;
 	}
 
@@ -118,39 +119,148 @@ public class Vendedor implements Persona {
 		
 	}
 
+	
 	@Override
-	public BigDecimal getPreciounitario() {
+	public Integer getCantidad() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+	@Override
+	public Cliente getCliente() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setPreciounitario(BigDecimal preciounitario) {
+	public void setCliente(Cliente cliente) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public BigDecimal getImpuesto() {
+	public String getNumerofactura() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setImpuesto(BigDecimal impuesto) {
+	public void setNumerofactura(String numerofactura) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public String getCantidad() {
+	public Date getFecha() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setCantidad(String cantidad) {
+	public void setFecha(Date fecha) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public Integer getTotal() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setTotal(Integer total) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Factura getFactu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setFactu(Factura factu) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Producto getProdu() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setProdu(Producto produ) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+
+	@Override
+	public void setId(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+	@Override
+	public void setCantidad(Integer cantidad) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Integer getPreciounitario() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getImpuesto() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean saveFactura(Factura factura) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Factura getFacturaInfo(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Producto getProductInfo(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getMaxId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Cliente getClientInfo(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+	
 }
